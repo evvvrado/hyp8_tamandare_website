@@ -1,1 +1,629 @@
-@media(prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}html{font-size:62.5%;scroll-behavior:smooth}html::-webkit-scrollbar{display:none}html *{margin:0;padding:0;border:none;box-sizing:border-box;list-style:none;outline:none;text-decoration:none;font-size:1.6rem}html img{max-width:100%;display:block}html button{background-color:transparent;cursor:pointer}html ul,html ol{margin:0}html .container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}html .container-fluid .container-fav{width:100%;max-width:calc(1216px + 30px);margin:0 auto;padding:0 15px}@media(max-width: 600px){html{font-size:40%}}h1{color:red}h2{color:red}h3{color:red}h4{color:red}p{color:red}/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Flama";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Flama"), url("/assets/fonts/Flama Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Flama Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Flama Italic"), url("/assets/fonts/Flama Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Flama Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Flama Bold Italic"), url("/assets/fonts/Flama Bold Italic.woff") format("woff");
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  /* GRID */
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+html ::selection {
+  color: white;
+  background: #ec1e24;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: white;
+}
+html::-webkit-scrollbar-thumb {
+  background: #ec1e24;
+}
+html::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #fbb03b;
+}
+html * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+html img {
+  max-width: 100%;
+  display: block;
+}
+html button {
+  background-color: transparent;
+  cursor: pointer;
+}
+html ul,
+html ol {
+  margin: 0;
+}
+html a {
+  color: unset;
+}
+html section,
+html div[fluid] {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+html section .niv,
+html div[fluid] .niv {
+  width: 100%;
+  max-width: 1164px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+html [niv-follow] {
+  transition: 0.32s;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@keyframes upandown {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(1rem);
+  }
+  66% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes svganimation {
+  0% {
+    stroke-dasharray: 78;
+  }
+  70% {
+    stroke-dasharray: 400;
+  }
+  100% {
+    fill: white;
+    stroke: 1px;
+  }
+}
+@keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 120%;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+@keyframes zigzag {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}
+h1 {
+  font-size: 6.8rem;
+  line-height: 9.6rem;
+  color: white;
+  font-family: "Flama";
+}
+
+h2 {
+  font-size: 6.2rem;
+  line-height: 9.3rem;
+  color: #333333;
+  font-family: "Flama";
+}
+
+h3 {
+  color: red;
+}
+
+h4 {
+  color: red;
+}
+
+p {
+  font-family: "Lato";
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  transition: 0.3s;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+header._re {
+  background: white;
+  box-shadow: 0px 3px 6px #00000029;
+}
+header._re div[fluid] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header._re div[fluid] .niv.--header a.logo img.--black {
+  display: block;
+}
+header._re div[fluid] .niv.--header a.logo img.--white {
+  display: none;
+}
+header._re div[fluid] .niv.--header nav li a {
+  color: #aaaaaa;
+}
+header._re div[fluid] .niv.--header nav li[active] a {
+  color: #ec1e24;
+}
+header._re div[fluid] .niv.--header div button {
+  background: transparent linear-gradient(178deg, #ffeb00 0%, #fbb03b 100%) 0% 0% no-repeat padding-box;
+  background-size: 170% 170%;
+  background-position: 0 0;
+  border: none;
+  box-shadow: 0px 10px 16px #ddd0a6;
+}
+header._re div[fluid] .niv.--header div button span {
+  font-size: 1.5rem;
+  color: #333333;
+  font-family: "Flama";
+  font-weight: bold;
+}
+header div[fluid] {
+  transition: 0.32s;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+}
+header div[fluid] .niv.--header {
+  max-width: 164.8rem;
+  transition: 0.32s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 21.7rem;
+}
+header div[fluid] .niv.--header a.logo {
+  width: 100%;
+  max-width: 27.6rem;
+}
+header div[fluid] .niv.--header a.logo img.--black {
+  display: none;
+}
+header div[fluid] .niv.--header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 47.5rem;
+}
+header div[fluid] .niv.--header nav ul li {
+  transition: 0.32s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+header div[fluid] .niv.--header nav ul li::after {
+  position: absolute;
+  content: "";
+  bottom: -0.6rem;
+  height: 0.3rem;
+  width: 0;
+  transition: 0.32s;
+  border-radius: 1rem;
+  background-color: #ec1e24;
+}
+header div[fluid] .niv.--header nav ul li a {
+  color: white;
+  font-weight: bold;
+}
+header div[fluid] .niv.--header nav ul li[active]::after {
+  background-color: #fbb03b;
+}
+header div[fluid] .niv.--header nav ul li[active] a {
+  color: #fbb03b;
+}
+header div[fluid] .niv.--header nav ul li:hover {
+  opacity: 0.6;
+}
+header div[fluid] .niv.--header nav ul li:hover::after {
+  width: 100%;
+}
+header div[fluid] .niv.--header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  max-width: 40.9rem;
+}
+header div[fluid] .niv.--header div button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0.9rem;
+  padding-left: 1rem;
+  border: solid 0.15rem white;
+  height: 6rem;
+  width: 100%;
+  max-width: 26rem;
+  transition: 0.32s;
+  border-radius: 4.6rem;
+}
+header div[fluid] .niv.--header div button span {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Flama";
+  font-weight: bold;
+}
+header div[fluid] .niv.--header div button:hover {
+  background-position: 50% 50%;
+  background-color: #ec1e24;
+}
+header div[fluid] .niv.--header div a img {
+  transition: 0.32s;
+}
+header div[fluid] .niv.--header div a:hover img {
+  filter: brightness(0.5);
+}
+@media (max-width: 1440px) {
+  header div[fluid] .niv.--header {
+    gap: 0;
+  }
+}
+@media (max-width: 1150px) {
+  header div[fluid] .niv.--header a.logo img {
+    max-width: 22.4rem;
+  }
+  header div[fluid] .niv.--header div {
+    justify-content: flex-end;
+  }
+  header div[fluid] .niv.--header div a {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  header div[fluid] .niv.--header nav ul {
+    width: unset;
+  }
+  header div[fluid] .niv.--header nav ul li:not([active]) {
+    display: none;
+  }
+  header div[fluid] .niv.--header div {
+    max-width: 26rem;
+  }
+}
+@media (max-width: 500px) {
+  header div[fluid] .niv.--header nav {
+    display: none;
+  }
+  header div[fluid] .niv.--header div button {
+    padding-left: 0.5rem;
+    width: unset;
+  }
+  header div[fluid] .niv.--header div button span {
+    display: none;
+  }
+  header div[fluid] .niv.--header div button img {
+    width: 90%;
+  }
+}
+
+section.hero {
+  background: url("/assets/img/fundo_hero.jpg");
+  background-position-x: right;
+  min-height: 89.1rem;
+  background-repeat: no-repeat;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.hero div.niv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  transition: 1s;
+  transition-delay: 0s;
+  position: relative;
+}
+section.hero div.niv[niv-fade] {
+  opacity: 0;
+  transform: translateY(20rem);
+}
+section.hero div.niv[niv-fade] {
+  filter: blur(1rem);
+}
+section.hero div.niv div.niv-tip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -22.6rem;
+  transition: 1s;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 1.2rem;
+  animation: upandown 5s linear infinite;
+  cursor: default;
+}
+section.hero div.niv div.niv-tip span {
+  font-family: "Lato";
+  font-size: 1.8rem;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  color: white;
+}
+section.hero div.niv div.niv-tip[hide] {
+  opacity: 0;
+}
+section.hero div.niv div.niv-text {
+  margin-top: 17.7rem;
+  max-width: 55.7rem;
+}
+section.hero div.niv div.niv-text p {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0px;
+  color: white;
+  max-width: 53.2rem;
+  margin-bottom: 5.3rem;
+}
+section.hero div.niv div.niv-text button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background: transparent linear-gradient(178deg, #ffeb00 0%, #fbb03b 100%) 0% 0% no-repeat padding-box;
+  background-size: 200% 200%;
+  background-position: 0 0;
+  border: none;
+  box-shadow: 0px 18px 18px #7c1012;
+  height: 8rem;
+  width: 100%;
+  max-width: 34rem;
+  transition: 0.32s;
+  border-radius: 4.6rem;
+  font-size: 2.4rem;
+  color: #333333;
+  font-family: "Flama";
+  font-weight: bold;
+  margin-bottom: 5.3rem;
+}
+section.hero div.niv div.niv-text button:hover {
+  background-position: 100% 100%;
+}
+section.hero div.niv div.niv-text .indicator div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+section.hero div.niv div.niv-text .indicator div span {
+  font-size: 1.6rem;
+  width: 1.9rem;
+  font-family: "Flama", sans-serif;
+  font-size: 1.6rem;
+  line-height: 4.2rem;
+  letter-spacing: 0px;
+  color: #ff777b;
+  transition: 0.32s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+section.hero div.niv div.niv-text .indicator div span::after {
+  position: absolute;
+  content: "";
+  transition: 0.32s;
+  height: 0.5rem;
+  width: 1.9rem;
+  border-radius: 0.5rem;
+  background-color: #ff777b;
+  bottom: 0;
+}
+section.hero div.niv div.niv-text .indicator div span[active] {
+  font-size: 2.4rem;
+  font-weight: bold;
+  width: 3.7rem;
+  color: white;
+}
+section.hero div.niv div.niv-text .indicator div span[active]::after {
+  background-color: #fbb03b;
+  width: 3.7rem;
+}
+section.hero div.niv div.niv-text .indicator div span:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+section.hero div.niv div.niv-text .indicator div span:hover::after {
+  width: 0;
+}
+section.hero div.niv div.niv-images {
+  margin-top: 3.8rem;
+  width: 100%;
+  max-width: 45.8rem;
+  height: 74rem;
+  margin-left: 6rem;
+}
+section.hero div.niv div.niv-images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+section.hero div.niv div.niv-arrows {
+  margin-top: 29.8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4.4rem;
+  position: relative;
+  right: -14.7rem;
+  width: 5.9rem;
+}
+section.hero div.niv div.niv-arrows button {
+  transition: 0.32s;
+}
+section.hero div.niv div.niv-arrows button:hover {
+  opacity: 0.7;
+}
+section.hero div.niv div.case {
+  transition: 0.1s;
+  transition: opacity 1s;
+}
+section.hero div.niv div.case[hide] {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+@media (max-width: 1366px) {
+  section.hero div.niv div.niv-arrows {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  section.hero {
+    min-height: unset;
+    padding-bottom: 11rem;
+  }
+  section.hero div.niv div.niv-images {
+    position: absolute;
+    right: 0;
+  }
+  section.hero div.niv div.niv-text {
+    z-index: 2;
+  }
+}
+@media (max-width: 600px) {
+  section.hero div.niv div.niv-text h1 {
+    font-size: 4.5rem;
+    line-height: 120%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

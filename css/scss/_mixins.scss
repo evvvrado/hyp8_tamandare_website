@@ -5,7 +5,7 @@
   flex-direction: $direction;
 }
 
-@mixin fade($transform, $time, $delay) {
+@mixin fade($transform, $time, $delay: 0s) {
   transition: $time;
   transition-delay: $delay;
   &[niv-fade] {

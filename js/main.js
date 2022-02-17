@@ -24,24 +24,26 @@ $(document).scroll(() => {
 
     if (sT == 0) {
         $('header').removeClass('_re')
+        $(".niv-tip").toggleAttr('hide');
     } else {
         $('header').addClass('_re')
+        $(".niv-tip").toggleAttr('hide');
     }
 
     if (sT !== 0) {
         $("header").addClass("_hi");
-        $(".scroll_icon").addClass("_hi");
     } else {
         $("header").removeClass("_hi");
-        $(".scroll_icon").removeClass("_hi");
     }
 
     let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
 
     if (currentScroll > 0 && oS <= currentScroll) {
         oS = currentScroll;
+        nivFollow(false);
     } else {
         $("header").removeClass("_hi");
+        nivFollow(true);
         oS = currentScroll;
 
     }
@@ -215,10 +217,117 @@ setTimeout(() => {
 }, 3000);
 
 
+(function ($) {
+    $.fn.toggleAttr = function (attr) {
+        if ($(this).attr(attr) == '') {
+            $(this).removeAttr(attr)
+        } else {
+            $(this).attr(attr, '')
+        }
+        return this;
+    }
+
+})(jQuery);
 
 //SETAR CLICKS
+var case1 = $('section.hero div.niv div.case.case--1');
+var case2 = $('section.hero div.niv div.case.case--2');
+var case3 = $('section.hero div.niv div.case.case--3');
+
+var heroButtons = $('section.hero div.niv div.niv-arrows button');
+var isHoverButton = false;
+var indicator = $('section.hero div.niv div.niv-text .indicator div span');
+
+
+heroButtons.mouseenter(() => {
+    isHoverButton = true;
+})
+heroButtons.mouseleave(() => {
+    isHoverButton = false;
+})
+
+
+function changeHero() {
+    defineCase1();
+
+    setInterval(() => {
+        if ($(document).scrollTop() !== 0 || isHoverButton) return false;
+
+        if (case1.attr('hide') == "" && case2.attr('hide') == "") {
+            //APARECENDO o 3
+            defineCase1();
+
+
+        } else if (case2.attr('hide') == "" && case3.attr('hide') == "") {
+            //APARECENDO o 1
+            defineCase2();
+
+
+        } else if (case3.attr('hide') == "" && case1.attr('hide') == "") {
+            //APARECENDO o 2
+            defineCase3();
+        }
+    }, 4000)
+}
+
+function defineCase1() {
+    case1.removeAttr('hide');
+    case2.attr('hide', '');
+    case3.attr('hide', '');
+
+    indicator.removeAttr('active');
+    $(indicator[0]).attr('active', '');
+
+
+
+    $(heroButtons[0]).click(() => {
+        defineCase2();
+    })
+    $(heroButtons[1]).click(() => {
+        defineCase3();
+    })
+
+}
+
+function defineCase2() {
+    case1.attr('hide', '');
+    case2.removeAttr('hide');
+    case3.attr('hide', '');
+
+    indicator.removeAttr('active');
+    $(indicator[1]).attr('active', '');
+
+
+    $(heroButtons[0]).click(() => {
+        defineCase3();
+    })
+    $(heroButtons[1]).click(() => {
+        defineCase1();
+    })
+
+}
+
+function defineCase3() {
+    case1.attr('hide', '');
+    case2.attr('hide', '');
+    case3.removeAttr('hide');
+
+    indicator.removeAttr('active');
+    $(indicator[2]).attr('active', '');
+
+
+    $(heroButtons[0]).click(() => {
+        defineCase1();
+    })
+    $(heroButtons[1]).click(() => {
+        defineCase2();
+    })
+}
 
 $(document).ready(function () {
+    changeHero();
+
+
 })
 
 

@@ -1,0 +1,239 @@
+section.hero {
+    background: url("/assets/img/fundo_hero.jpg");
+    background-position-x: right;
+    min-height: 89.1rem;
+    background-repeat: no-repeat;
+
+    div.niv {
+        @include flex(row, flex-start, flex-start);
+        @include fade(translateY(20rem), 1s);
+
+        position: relative;
+
+        &[niv-fade] {
+            filter: blur(1rem);
+        }
+
+        div.niv-tip {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            left: -22.6rem;
+            transition: 1s;
+
+            margin: 0 auto;
+
+            @include flex(column-reverse, center, center);
+            gap: 1.2rem;
+
+            animation: upandown 5s linear infinite;
+
+            cursor: default;
+
+            span {
+                font-family: "Lato";
+                font-size: 1.8rem;
+                font-weight: bold;
+
+                writing-mode: vertical-lr;
+                text-orientation: mixed;
+
+                transform: rotate(180deg);
+
+                color: $white;
+            }
+
+            &[hide] {
+                opacity: 0;
+            }
+        }
+
+        div.niv-text {
+            margin-top: 17.7rem;
+            max-width: 55.7rem;
+
+            p {
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+                letter-spacing: 0px;
+                color: $white;
+                max-width: 53.2rem;
+
+                margin-bottom: 5.3rem;
+            }
+
+            button {
+                @include flex(row, center, center);
+                background: $second-gradient;
+                background-size: 200% 200%;
+                background-position: 0 0;
+
+                border: none;
+
+                box-shadow: 0px 18px 18px #7c1012;
+
+                height: 8rem;
+                width: 100%;
+                max-width: 34rem;
+
+                transition: 0.32s;
+
+                border-radius: 4.6rem;
+
+                font-size: 2.4rem;
+                color: $grey;
+
+                font-family: "Flama";
+                font-weight: bold;
+
+                margin-bottom: 5.3rem;
+
+                &:hover {
+                    background-position: 100% 100%;
+                }
+            }
+
+            .indicator {
+                div {
+                    @include flex(row, center, flex-start);
+                    gap: 0.8rem;
+
+                    span {
+                        font-size: 1.6rem;
+                        width: 1.9rem;
+                        font-family: "Flama", sans-serif;
+
+                        font-size: 1.6rem;
+                        line-height: 4.2rem;
+                        letter-spacing: 0px;
+                        color: #ff777b;
+
+                        transition: 0.32s;
+
+                        position: relative;
+
+                        @include flex(row, center, center);
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+
+                            transition: 0.32s;
+
+                            height: 0.5rem;
+                            width: 1.9rem;
+
+                            border-radius: 0.5rem;
+
+                            background-color: #ff777b;
+
+                            bottom: 0;
+                        }
+
+                        &[active] {
+                            font-size: 2.4rem;
+                            font-weight: bold;
+                            width: 3.7rem;
+                            color: $white;
+
+                            &::after {
+                                background-color: $main-orange;
+                                width: 3.7rem;
+                            }
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            opacity: 0.7;
+
+                            &::after {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        div.niv-images {
+            margin-top: 3.8rem;
+            width: 100%;
+            max-width: 45.8rem;
+            height: 74rem;
+
+            margin-left: 6rem;
+
+            // margin-right: 14.7rem;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        div.niv-arrows {
+            margin-top: 29.8rem;
+            @include flex(column, flex-end, center);
+            gap: 4.4rem;
+
+            position: relative;
+            right: -14.7rem;
+
+            width: 5.9rem;
+
+            button {
+                transition: 0.32s;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        div.case {
+            transition: 0.1s;
+            transition: opacity 1s;
+            &[hide] {
+                height: 0;
+                width: 0;
+                padding: 0;
+                margin: 0;
+                opacity: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    @include responsive(1366px) {
+        div.niv {
+            div.niv-arrows {
+                display: none;
+            }
+        }
+    }
+    @include responsive(800px) {
+        min-height: unset;
+        padding-bottom: 11rem;
+        div.niv {
+            div.niv-images {
+                position: absolute;
+                right: 0;
+            }
+
+            div.niv-text {
+                z-index: 2;
+            }
+        }
+    }
+    @include responsive(600px) {
+        div.niv {
+            div.niv-text {
+                h1 {
+                    font-size: 4.5rem;
+                    line-height: 120%;
+                }
+            }
+        }
+    }
+}

@@ -8,10 +8,248 @@ header {
     transition: 0.3s;
 
     &._re {
-        top: -50rem;
+        background: $white;
+        box-shadow: 0px 3px 6px #00000029;
+
+        div[fluid] {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            .niv.--header {
+                a.logo {
+                    img.--black {
+                        display: block;
+                    }
+
+                    img.--white {
+                        display: none;
+                    }
+                }
+
+                nav {
+                    li {
+                        a {
+                            color: $light-grey;
+                        }
+
+                        &[active] {
+                            a {
+                                color: $main-red;
+                            }
+                        }
+                    }
+                }
+                div {
+                    button {
+                        background: $main-gradient;
+                        background-size: 170% 170%;
+                        background-position: 0 0;
+
+                        border: none;
+
+                        box-shadow: 0px 10px 16px #ddd0a6;
+
+                        span {
+                            font-size: 1.5rem;
+                            color: $grey;
+
+                            font-family: "Flama";
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &._hi {
-        top: -100rem;
+        // top: -100rem;
+    }
+
+    div[fluid] {
+        transition: 0.32s;
+        padding-top: 2.6rem;
+        padding-bottom: 2.6rem;
+
+        .niv.--header {
+            max-width: 164.8rem;
+            transition: 0.32s;
+
+            @include flex(row, center, space-between);
+            gap: 21.7rem;
+
+            a.logo {
+                width: 100%;
+                max-width: 27.6rem;
+                img.--black {
+                    display: none;
+                }
+            }
+
+            nav {
+                ul {
+                    @include flex(row, center, space-between);
+                    width: 47.5rem;
+                    li {
+                        transition: 0.32s;
+                        position: relative;
+                        @include flex(row, center, center);
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+
+                            bottom: -0.6rem;
+                            height: 0.3rem;
+                            width: 0;
+
+                            transition: 0.32s;
+
+                            border-radius: 1rem;
+
+                            background-color: $main-red;
+                        }
+
+                        a {
+                            color: $white;
+                            font-weight: bold;
+                        }
+
+                        &[active] {
+                            &::after {
+                                background-color: $main-orange;
+                            }
+                            a {
+                                color: $main-orange;
+                            }
+                        }
+
+                        &:hover {
+                            opacity: 0.6;
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            div {
+                @include flex(row, center, space-between);
+
+                width: 100%;
+                max-width: 40.9rem;
+
+                button {
+                    @include flex(row, center, flex-start);
+                    gap: 0.9rem;
+                    padding-left: 1rem;
+
+                    border: solid 0.15rem $white;
+
+                    height: 6rem;
+                    width: 100%;
+                    max-width: 26rem;
+
+                    transition: 0.32s;
+
+                    border-radius: 4.6rem;
+
+                    span {
+                        font-size: 1.5rem;
+                        color: $white;
+
+                        font-family: "Flama";
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        background-position: 50% 50%;
+                        background-color: $main-red;
+                    }
+                }
+
+                a {
+                    img {
+                        transition: 0.32s;
+                    }
+
+                    &:hover {
+                        img {
+                            filter: brightness(0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(1440px) {
+        div[fluid] {
+            .niv.--header {
+                gap: 0;
+            }
+        }
+    }
+
+    @include responsive(1150px) {
+        div[fluid] {
+            .niv.--header {
+                a.logo {
+                    img {
+                        max-width: 22.4rem;
+                    }
+                }
+                div {
+                    justify-content: flex-end;
+                    a {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        div[fluid] {
+            .niv.--header {
+                nav {
+                    ul {
+                        width: unset;
+                        li:not([active]) {
+                            display: none;
+                        }
+                    }
+                }
+
+                div {
+                    max-width: 26rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(500px) {
+        div[fluid] {
+            .niv.--header {
+                nav {
+                    display: none;
+                }
+
+                div {
+                    button {
+                        span {
+                            display: none;
+                        }
+                        padding-left: 0.5rem;
+                        width: unset;
+
+                        img {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

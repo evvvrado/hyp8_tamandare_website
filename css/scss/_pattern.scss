@@ -1,8 +1,16 @@
 h1 {
-  color: red;
+  font-size: 6.8rem;
+  line-height: 9.6rem;
+  color: $white;
+
+  font-family: "Flama";
 }
 h2 {
-  color: red;
+  font-size: 6.2rem;
+  line-height: 9.3rem;
+  color: $grey;
+
+  font-family: "Flama";
 }
 h3 {
   color: red;
@@ -11,5 +19,5 @@ h4 {
   color: red;
 }
 p {
-  color: red;
+  font-family: "Lato";
 }

@@ -1,0 +1,45 @@
+section.qualidade {
+    background: url("/assets/img/fundo_qualidade.png");
+    min-height: 101rem;
+
+    div.niv {
+        @include flex(row, center, flex-start);
+
+        div.niv-text {
+            max-width: 35.8rem;
+
+            p {
+                color: $light-grey;
+                margin-top: 2.1rem;
+                margin-bottom: 3.8rem;
+
+                max-width: 31rem;
+            }
+
+            h2 {
+                line-height: 8rem;
+            }
+
+            div {
+                @include flex(row, center, flex-start);
+                gap: 2rem;
+
+                animation: upandown 6s linear infinite;
+
+                span {
+                    color: $grey;
+                    font-weight: bold;
+                    display: block;
+                    max-width: 60%;
+                }
+            }
+        }
+
+        div.niv-picture {
+            margin-top: 9rem;
+
+            transition-time: $timing !important;
+            @include fade(translateX(200px) scale(0.05), 1s);
+        }
+    }
+}

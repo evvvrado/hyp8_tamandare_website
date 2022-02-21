@@ -4,7 +4,7 @@ section.hero {
     min-height: 89.1rem;
     background-repeat: no-repeat;
 
-    div.niv {
+    div.niv.--principal {
         @include flex(row, flex-start, flex-start);
         @include fade(translateY(20rem), 1s);
 
@@ -204,30 +204,147 @@ section.hero {
             }
         }
     }
+    div.niv.--boxes {
+        @include flex(row, flex-end, space-between);
+
+        div.niv-left {
+            div.box {
+                @include fade(translateY(20rem), 1s);
+
+                height: 26.3rem;
+                width: 100%;
+                max-width: 53.6rem;
+                background-color: $white;
+                border-radius: 2.4rem;
+                box-shadow: 0px 13px 16px #93898940;
+
+                padding: 1.9rem 3.8rem 2.1rem 1.3rem;
+
+                @include flex(row, flex-start, flex-stsart);
+                gap: 1.2rem;
+
+                main {
+                    max-width: 30.6rem;
+
+                    strong {
+                        font-size: 3.2rem;
+                        font-family: "Flama";
+                        line-height: 4.8rem;
+                        font-weight: bold;
+                        margin-bottom: 1.7rem;
+                        color: $grey;
+                        display: block;
+                    }
+
+                    p {
+                        color: $light-grey;
+                        margin-bottom: 2.8rem;
+                        display: block;
+                    }
+
+                    a {
+                        @include flex(row, center, flex-start);
+                        gap: 1.7rem;
+
+                        color: $main-orange;
+                        font-weight: bold;
+
+                        transition: 0.32s;
+
+                        &:hover {
+                            color: $main-red;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.niv-right {
+            .box {
+                @include fade(translateY(20rem), 1s, 0.5s);
+
+                height: 14.3rem;
+                width: 61rem;
+                background-color: $white;
+                border: 0.1rem solid #c7c7c7;
+
+                @include flex(row, center, start);
+                gap: 2.3rem;
+                padding-left: 2.1rem;
+                border-radius: 2.4rem;
+
+                margin-right: -13.7rem;
+
+                cursor: default;
+
+                p {
+                    max-width: 31.8rem;
+
+                    font-size: 2.4rem;
+                    font-weight: bold;
+                    color: $grey;
+                }
+            }
+        }
+    }
 
     @include responsive(1366px) {
-        div.niv {
+        div.niv.--principal {
             div.niv-arrows {
                 display: none;
+            }
+        }
+
+        div.niv.--boxes {
+            margin-top: -3rem;
+            div.niv-right {
+                div.box {
+                    margin-right: 0;
+                    width: 100%;
+                }
             }
         }
     }
     @include responsive(800px) {
         min-height: unset;
         padding-bottom: 11rem;
-        div.niv {
+        div.niv.--principal {
             div.niv-images {
                 position: absolute;
                 right: 0;
+                z-index: 1;
             }
 
             div.niv-text {
                 z-index: 2;
             }
         }
+
+        div.niv.--boxes {
+            position: relative;
+            z-index: 2;
+            margin-top: 3rem;
+            @include flex(column, center, center);
+            gap: 3rem;
+
+            div.niv-right,
+            div.niv-left {
+                width: 100%;
+                div.box {
+                    width: 100%;
+                    max-width: unset;
+                    height: unset;
+                    min-height: 14.3rem;
+
+                    main {
+                        max-width: 65%;
+                    }
+                }
+            }
+        }
     }
     @include responsive(600px) {
-        div.niv {
+        div.niv.--principal {
             div.niv-text {
                 h1 {
                     font-size: 4.5rem;

@@ -78,7 +78,7 @@ $('.modal button.cancel').click(function () {
 // NIV-FADE
 
 $(document).ready(() => {
-    $("[niv-fade]:first-child").removeAttr("niv-fade");
+    $(".hero [niv-fade]").removeAttr("niv-fade");
 
     $(".backdrop").animate(
         {
@@ -98,6 +98,39 @@ $(document).ready(() => {
                 $(this).removeAttr("niv-fade");
             }
         });
+
+        $('header div[fluid] div.niv nav ul li').click(function () {
+            $('header div[fluid] div.niv nav ul li').removeAttr('active');
+            $(this).attr('active', '');
+        })
+
+        if (
+            $(document).scrollTop() >=
+            $('section.grupo#grupo div.niv').offset().top -
+            ($(window).height() * 3) / 4
+
+            &&
+
+            $(document).scrollTop() <=
+            $('section.grupo#grupo div.niv').offset().top + $('section.grupo#grupo div.niv').height()
+        ) {
+
+            $('header div[fluid] div.niv nav ul li').removeAttr('active');
+            $('header div[fluid] div.niv nav ul li:nth-child(1)').attr('active', '');
+        }
+        else if (
+            $(document).scrollTop() >=
+            $('section.missao#missao div.niv').offset().top -
+            ($(window).height() * 3) / 4
+
+            &&
+
+            $(document).scrollTop() <=
+            $('section.missao#missao div.niv').offset().top + $('section.missao#missao div.niv').height()
+        ) {
+            $('header div[fluid] div.niv nav ul li').removeAttr('active');
+            $('header div[fluid] div.niv nav ul li:nth-child(2)').attr('active', '');
+        }
     })
 })
 
@@ -326,6 +359,17 @@ function defineCase3() {
 
 $(document).ready(function () {
     changeHero();
+
+
+    $('section.grupo div.niv div.niv-picture div.button.--next').click(() => {
+        $('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft($('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft() + 550);
+    })
+
+
+
+    $('section.grupo div.niv div.niv-picture div.button.--prev').click(() => {
+        $('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft($('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft() - 550);
+    })
 
 
 })

@@ -1,0 +1,72 @@
+section.missao {
+    background: url("/assets/img/fundo_missao.png");
+    background-size: auto auto;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    div.niv {
+        @include flex(row, center, space-between);
+
+        div.niv-text {
+            max-width: 46.4rem;
+
+            picture {
+                display: block;
+                margin-bottom: 4.3rem;
+
+                @include fade(translateX(-20rem), 1s);
+            }
+
+            h2 {
+                margin-bottom: 2.1rem;
+
+                @include fade(translateY(20rem), 1s);
+            }
+
+            p {
+                @include fade(translateY(20rem), 1s, 0.3s);
+            }
+        }
+
+        div.niv-picture {
+            margin-left: -40rem;
+
+            @include fade(rotate(45deg) scale(0), 1s, 0.5s);
+            img {
+                animation: scale 6s infinite alternate-reverse;
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        background-size: auto 100%;
+        div.niv {
+            flex-direction: column;
+
+            div.niv-text {
+                text-align: right;
+                position: relative;
+                top: -15rem;
+            }
+            div.niv-picture {
+                width: 70%;
+            }
+        }
+    }
+
+    @include responsive(400px) {
+        padding-top: 12rem;
+        div.niv {
+            div.niv-picture {
+                position: absolute;
+                width: unset;
+                opacity: 0.4;
+            }
+            div.niv-text {
+                top: 0;
+                text-align: center;
+            }
+        }
+    }
+}

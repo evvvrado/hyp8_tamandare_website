@@ -1,0 +1,121 @@
+section.contato#contato {
+    background: url(/assets/img/fundo_contato.png);
+    padding-top: 12.3rem;
+    padding-bottom: 7.7rem;
+    margin-top: -4.2rem;
+
+    div.niv {
+        @include flex(row, flex-start, space-between);
+
+        div.niv-text {
+            max-width: 40rem;
+
+            h2 {
+                line-height: 8rem;
+                margin-bottom: 3.3rem;
+                margin-top: 1rem;
+            }
+        }
+
+        div.niv-form {
+            width: 100%;
+            max-width: 55.2rem;
+
+            span {
+                color: $white;
+                font-weight: bold;
+                font-size: 1.8rem;
+                margin-bottom: 2.2rem;
+                display: block;
+            }
+
+            form {
+                width: 100%;
+                display: block;
+                label {
+                    width: 100%;
+                    display: flex;
+                    @include fade(translateY(20rem) scale(0), 0.32s);
+
+                    @for $i from 1 through 4 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: calc($i * 0.5s);
+                        }
+                    }
+
+                    input,
+                    textarea {
+                        background-color: $white;
+
+                        color: $grey;
+                        min-height: 6rem;
+                        width: 100%;
+
+                        padding-left: 2.7rem;
+
+                        margin-bottom: 2.4rem;
+
+                        font-family: "Flama";
+                        font-weight: normal;
+                    }
+
+                    input {
+                        border-radius: 3.4rem;
+                    }
+
+                    textarea {
+                        resize: none;
+                        height: 16.3rem;
+                        padding-top: 1.7rem;
+                        border-radius: 1.8rem;
+                    }
+                }
+
+                button {
+                    height: 6rem;
+                    width: 26rem;
+                    border-radius: 3rem;
+
+                    background: $main-gradient;
+
+                    float: right;
+                    @include flex(row, center, center);
+
+                    gap: 1.8rem;
+
+                    span {
+                        font-size: 1.5rem;
+                        font-family: "Flama";
+                        font-weight: bold;
+
+                        margin-bottom: 0;
+                        color: $grey;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        background-size: cover;
+
+        div.niv {
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+
+            div.niv-text,
+            div.niv-form {
+                text-align: center;
+                align-items: center;
+            }
+
+            picture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

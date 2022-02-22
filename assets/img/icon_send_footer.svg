@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
+  <g id="Grupo_10102" data-name="Grupo 10102" transform="translate(-1480 -5074)">
+    <g id="Grupo_10100" data-name="Grupo 10100">
+      <circle id="Elipse_6" data-name="Elipse 6" cx="17.5" cy="17.5" r="17.5" transform="translate(1484 5078)" fill="#fbb03b"/>
+      <g id="send" transform="translate(1493.584 5089.25)">
+        <path id="Caminho_3976" data-name="Caminho 3976" d="M8.75,17.612v2.532a.409.409,0,0,0,.739.242l1.481-2.016Z" transform="translate(-3.973 -7.997)" fill="#fff"/>
+        <path id="Caminho_3977" data-name="Caminho 3977" d="M12.93.076A.41.41,0,0,0,12.5.046L.22,6.461a.41.41,0,0,0,.057.751L3.692,8.379l7.272-6.218L5.336,8.941,11.059,10.9a.419.419,0,0,0,.132.022.409.409,0,0,0,.405-.349L13.1.47A.41.41,0,0,0,12.93.076Z" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Grupo_10101" data-name="Grupo 10101">
+      <g id="Elipse_29" data-name="Elipse 29" transform="translate(1480 5074)" fill="none" stroke="#fbb03b" stroke-width="1">
+        <circle cx="21.5" cy="21.5" r="21.5" stroke="none"/>
+        <circle cx="21.5" cy="21.5" r="21" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

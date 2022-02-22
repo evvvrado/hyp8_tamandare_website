@@ -131,6 +131,32 @@ $(document).ready(() => {
             $('header div[fluid] div.niv nav ul li').removeAttr('active');
             $('header div[fluid] div.niv nav ul li:nth-child(2)').attr('active', '');
         }
+        else if (
+            $(document).scrollTop() >=
+            $('section.onde#onde div.niv').offset().top -
+            ($(window).height() * 3) / 4
+
+            &&
+
+            $(document).scrollTop() <=
+            $('section.onde#onde div.niv').offset().top + $('section.onde#onde div.niv').height()
+        ) {
+            $('header div[fluid] div.niv nav ul li').removeAttr('active');
+            $('header div[fluid] div.niv nav ul li:nth-child(3)').attr('active', '');
+        }
+        else if (
+            $(document).scrollTop() >=
+            $('section.contato#contato div.niv').offset().top -
+            ($(window).height() * 3) / 4
+
+            &&
+
+            $(document).scrollTop() <=
+            $('section.contato#contato div.niv').offset().top + $('section.contato#contato div.niv').height()
+        ) {
+            $('header div[fluid] div.niv nav ul li').removeAttr('active');
+            $('header div[fluid] div.niv nav ul li:nth-child(4)').attr('active', '');
+        }
     })
 })
 

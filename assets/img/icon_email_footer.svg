@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60">
+  <g id="icon_email_footer" transform="translate(-801.483 -5111.149)">
+    <g id="Grupo_10070" data-name="Grupo 10070" transform="translate(801.483 5111)">
+      <ellipse id="Elipse_28" data-name="Elipse 28" cx="30.5" cy="30" rx="30.5" ry="30" transform="translate(0 0.149)" fill="#333"/>
+      <g id="Grupo_10069" data-name="Grupo 10069" transform="translate(3.506 3.506)">
+        <ellipse id="Elipse_22" data-name="Elipse 22" cx="22.5" cy="22" rx="22.5" ry="22" transform="translate(4.494 4.644)" fill="#ec1e24"/>
+        <g id="Elipse_23" data-name="Elipse 23" transform="translate(0.494 -0.356)" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 6">
+          <ellipse cx="26.5" cy="27" rx="26.5" ry="27" stroke="none"/>
+          <ellipse cx="26.5" cy="27" rx="25.5" ry="26" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g id="email" transform="translate(817.814 5133.838)">
+      <path id="Caminho_3972" data-name="Caminho 3972" d="M26.823,5.723A2.037,2.037,0,0,0,25.266,5H8.348A2.033,2.033,0,0,0,6.337,6.7L4.464,17.764a2.038,2.038,0,0,0,2.009,2.379H23.392a2.033,2.033,0,0,0,2.011-1.7L27.275,7.379A2.034,2.034,0,0,0,26.823,5.723Zm-2.5,4.577-7.4,3.064a2.624,2.624,0,0,1-2.155-.07L8.052,9.986l.3-1.794,7.187,3.541a.915.915,0,0,0,.722.023l8.4-3.483ZM26.9,9.019l.093-.582A.777.777,0,0,1,26.9,9.019Z" transform="translate(0.731 -5)" fill="#fff"/>
+      <path id="Caminho_3973" data-name="Caminho 3973" d="M4.659,8.33H1.165a1.165,1.165,0,0,1,0-2.33H4.659a1.165,1.165,0,0,1,0,2.33Z" transform="translate(0 -4.835)" fill="#fff"/>
+      <path id="Caminho_3974" data-name="Caminho 3974" d="M3.495,12.33H1.165a1.165,1.165,0,1,1,0-2.33h2.33a1.165,1.165,0,1,1,0,2.33Z" transform="translate(0 -4.176)" fill="#fff"/>
+      <path id="Caminho_3975" data-name="Caminho 3975" d="M2.33,16.33H1.165a1.165,1.165,0,0,1,0-2.33H2.33a1.165,1.165,0,0,1,0,2.33Z" transform="translate(0 -3.516)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

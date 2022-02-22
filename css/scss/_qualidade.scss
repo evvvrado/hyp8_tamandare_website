@@ -42,4 +42,19 @@ section.qualidade {
             @include fade(translateX(200px) scale(0.05), 1s);
         }
     }
+
+    @include responsive(600px) {
+        padding-top: 4rem;
+        min-height: unset;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    @include responsive(500px) {
+        background-size: 100% auto;
+        background-position: center 30rem;
+        div.niv {
+            flex-direction: column-reverse;
+        }
+    }
 }

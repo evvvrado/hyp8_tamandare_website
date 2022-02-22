@@ -84,7 +84,7 @@ $(document).ready(() => {
         {
             opacity: 0,
         },
-        3000
+        4000
     );
 
     var i = 0;

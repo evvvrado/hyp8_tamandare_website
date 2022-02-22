@@ -135,14 +135,10 @@ html [niv-follow] {
 }
 @keyframes svganimation {
   0% {
-    stroke-dasharray: 78;
-  }
-  70% {
-    stroke-dasharray: 400;
+    transform: translateY(250px);
   }
   100% {
-    fill: white;
-    stroke: 1px;
+    transform: translateY(0);
   }
 }
 @keyframes typing {
@@ -191,6 +187,26 @@ h4 {
 
 p {
   font-family: "Lato";
+}
+
+.backdrop {
+  background: white;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+  z-index: 666;
+}
+.backdrop svg {
+  align-self: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.backdrop svg g.animation {
+  transition: 0.32s;
+  animation: svganimation 1 ease-out 1s;
 }
 
 header {

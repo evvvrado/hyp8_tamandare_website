@@ -24,14 +24,10 @@
 
 @keyframes svganimation {
   0% {
-    stroke-dasharray: 78;
-  }
-  70% {
-    stroke-dasharray: 400;
+    transform: translateY(250px);
   }
   100% {
-    fill: $white;
-    stroke: 1px;
+    transform: translateY(0);
   }
 }
 

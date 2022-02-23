@@ -57,11 +57,14 @@ section.missao {
 
     @include responsive(400px) {
         padding-top: 12rem;
+        overflow: hidden;
         div.niv {
             div.niv-picture {
                 position: absolute;
-                width: unset;
+                width: 100vw;
                 opacity: 0.4;
+
+                overflow: hidden;
             }
             div.niv-text {
                 top: 0;

@@ -387,13 +387,13 @@ $(document).ready(function () {
     changeHero();
 
 
-    $('section.grupo div.niv div.niv-picture div.button.--next').click(() => {
+    $('section.grupo div.niv div.niv-picture div.button .--next').click(() => {
         $('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft($('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft() + 550);
     })
 
 
 
-    $('section.grupo div.niv div.niv-picture div.button.--prev').click(() => {
+    $('section.grupo div.niv div.niv-picture div.button .--prev').click(() => {
         $('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft($('section.grupo div.niv div.niv-picture picture.showcase').scrollLeft() - 550);
     })
 

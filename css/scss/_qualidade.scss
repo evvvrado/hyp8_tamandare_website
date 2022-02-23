@@ -53,6 +53,7 @@ section.qualidade {
     @include responsive(500px) {
         background-size: 100% auto;
         background-position: center 30rem;
+        overflow: hidden;
         div.niv {
             flex-direction: column-reverse;
         }

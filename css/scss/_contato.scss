@@ -4,6 +4,8 @@ section.contato#contato {
     padding-bottom: 7.7rem;
     margin-top: -4.2rem;
 
+    overflow: hidden;
+
     div.niv {
         @include flex(row, flex-start, space-between);
 

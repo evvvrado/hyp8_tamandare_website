@@ -802,6 +802,15 @@ section.grupo {
   @include responsive(600px) {}
 
   **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
 }
 section.grupo div.niv {
   display: flex;
@@ -881,7 +890,7 @@ section.grupo div.niv div.niv-picture div.button {
   cursor: pointer;
   transition: 0.32s;
 }
-section.grupo div.niv div.niv-picture div.button.--prev .button.--next {
+section.grupo div.niv div.niv-picture div.button.--s .--next {
   display: none;
 }
 section.grupo div.niv div.niv-picture div.button:hover {
@@ -918,7 +927,10 @@ section.grupo div.niv div.niv-picture div.button:hover {
     flex-direction: row;
     gap: 3rem;
   }
-  section.grupo div.niv div.niv-picture div.button.--next {
+  section.grupo div.niv div.niv-picture div.button.--s .--next {
+    display: block;
+  }
+  section.grupo div.niv div.niv-picture div.button:not(.--s) .--next {
     display: none;
   }
 }
@@ -928,6 +940,11 @@ section.grupo div.niv div.niv-picture div.button:hover {
   }
   section.grupo div.niv div.niv-picture picture.showcase {
     width: 45rem;
+  }
+}
+@media (max-width: 400px) {
+  section.grupo div.niv div.niv-picture picture.showcase {
+    width: calc(100vw - 60px);
   }
 }
 
@@ -1022,11 +1039,13 @@ section.missao div.niv div.niv-picture img {
 @media (max-width: 400px) {
   section.missao {
     padding-top: 12rem;
+    overflow: hidden;
   }
   section.missao div.niv div.niv-picture {
     position: absolute;
-    width: unset;
+    width: 100vw;
     opacity: 0.4;
+    overflow: hidden;
   }
   section.missao div.niv div.niv-text {
     top: 0;
@@ -1110,6 +1129,7 @@ section.qualidade div.niv div.niv-picture[niv-fade] {
   section.qualidade {
     background-size: 100% auto;
     background-position: center 30rem;
+    overflow: hidden;
   }
   section.qualidade div.niv {
     flex-direction: column-reverse;
@@ -1203,6 +1223,7 @@ section.contato#contato {
   padding-top: 12.3rem;
   padding-bottom: 7.7rem;
   margin-top: -4.2rem;
+  overflow: hidden;
   /**
 
   @include responsive(1400px) {}

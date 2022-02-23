@@ -72,8 +72,8 @@ section.grupo {
                 cursor: pointer;
                 transition: 0.32s;
 
-                &.--prev {
-                    .button.--next {
+                &.--s {
+                    .--next {
                         display: none;
                     }
                 }
@@ -117,7 +117,11 @@ section.grupo {
                 div.button {
                     @include flex(row, center, center);
                     gap: 3rem;
-                    &.--next {
+
+                    &.--s .--next {
+                        display: block;
+                    }
+                    &:not(.--s) .--next {
                         display: none;
                     }
                 }
@@ -135,6 +139,16 @@ section.grupo {
             div.niv-picture {
                 picture.showcase {
                     width: 45rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(400px) {
+        div.niv {
+            div.niv-picture {
+                picture.showcase {
+                    width: calc(100vw - 60px);
                 }
             }
         }

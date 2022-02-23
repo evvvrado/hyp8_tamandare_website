@@ -10,30 +10,3 @@ $main-gradient: transparent linear-gradient(178deg, #ffeb00 0%, #fbb03b 100%) 0%
 $second-gradient: transparent linear-gradient(178deg, #ffeb00 0%, #fbb03b 100%) 0% 0% no-repeat padding-box;
 
 $timing: cubic-bezier(0.5, 0, 0, 1);
-
-@font-face {
-    font-family: "Flama";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Flama"), url("/assets/fonts/Flama Regular.woff") format("woff");
-}
-@font-face {
-    font-family: "Flama Bold";
-    font-style: bold;
-    font-weight: bold;
-    src: local("Flama"), url("/assets/fonts/Flama Bold.otf") format("otf");
-}
-
-@font-face {
-    font-family: "Flama Italic";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Flama Italic"), url("/assets/fonts/Flama Italic.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Flama Bold Italic";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Flama Bold Italic"), url("/assets/fonts/Flama Bold Italic.woff") format("woff");
-}

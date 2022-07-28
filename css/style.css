@@ -406,7 +406,7 @@ header div[fluid] .niv.--header div a:hover img {
 }
 
 section.hero {
-  background: url("/assets/img/fundo_hero.jpg");
+  background: url("../assets/img/fundo_hero.jpg");
   background-position-x: right;
   min-height: 89.1rem;
   background-repeat: no-repeat;
@@ -726,18 +726,18 @@ section.hero div.niv.--boxes div.niv-right .box p {
     gap: 3rem;
   }
   section.hero div.niv.--boxes div.niv-right,
-section.hero div.niv.--boxes div.niv-left {
+  section.hero div.niv.--boxes div.niv-left {
     width: 100%;
   }
   section.hero div.niv.--boxes div.niv-right div.box,
-section.hero div.niv.--boxes div.niv-left div.box {
+  section.hero div.niv.--boxes div.niv-left div.box {
     width: 100%;
     max-width: unset;
     height: unset;
     min-height: 14.3rem;
   }
   section.hero div.niv.--boxes div.niv-right div.box main,
-section.hero div.niv.--boxes div.niv-left div.box main {
+  section.hero div.niv.--boxes div.niv-left div.box main {
     max-width: 65%;
   }
 }
@@ -799,7 +799,7 @@ section.grupo div.niv::after {
   position: absolute;
   width: 546px;
   height: 200px;
-  background: url("/assets/img/effect_grupo.svg");
+  background: url("../assets/img/effect_grupo.svg");
   left: 0;
   top: -2rem;
 }
@@ -925,7 +925,7 @@ section.grupo div.niv div.niv-picture div.button:hover {
 }
 
 section.missao {
-  background: url("/assets/img/fundo_missao.png");
+  background: url("../assets/img/fundo_missao.png");
   background-size: auto auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -1030,7 +1030,7 @@ section.missao div.niv div.niv-picture img {
 }
 
 section.qualidade {
-  background: url("/assets/img/fundo_qualidade.png");
+  background: url("../assets/img/fundo_qualidade.png");
   min-height: 101rem;
   /**
 
@@ -1114,7 +1114,7 @@ section.qualidade div.niv div.niv-picture[niv-fade] {
 
 section.onde#onde {
   margin-top: 5.8rem;
-  background: url("/assets/img/fundo_onde.png") no-repeat;
+  background: url("../assets/img/fundo_onde.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding-top: 12.2rem;
@@ -1195,7 +1195,7 @@ section.onde#onde div.niv div.niv-box picture.bomba {
 }
 
 section.contato#contato {
-  background: url(/assets/img/fundo_contato.png);
+  background: url(../assets/img/fundo_contato.png);
   padding-top: 12.3rem;
   padding-bottom: 7.7rem;
   margin-top: -4.2rem;
@@ -1311,7 +1311,7 @@ section.contato#contato div.niv div.niv-form form button span {
     gap: 4rem;
   }
   section.contato#contato div.niv div.niv-text,
-section.contato#contato div.niv div.niv-form {
+  section.contato#contato div.niv div.niv-form {
     text-align: center;
     align-items: center;
   }
